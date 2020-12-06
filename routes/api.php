@@ -22,4 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::namespace('Api\v1')->prefix('v1')->group(function(){
     Route::post('register', [UserController::class, 'register'])->name('register');
+    Route::post('login', [UserController::class, 'login'])->name('login');
 });
